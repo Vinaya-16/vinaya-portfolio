@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Home() {
-    const words = ["Developer", "Designer", "Student", "Builder"];
+    const words = ["Developer", "Designer", "Student"];
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [currentText, setCurrentText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
@@ -36,7 +36,7 @@ function Home() {
     }, [currentText, isDeleting, currentWordIndex, typingSpeed]);
 
     return (
-        <div className="hero-container">
+        <div className="hero-container" id="Home">
             <div className="right-glow"></div>
 
             <div className="hero-left">
