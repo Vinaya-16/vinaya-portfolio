@@ -15,6 +15,13 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
+
+      <footer>
+        <div className="ftr-section">
+          <p>Designed & built by <b>Vinaya Patole</b> - 2026 - Frontend Developer</p>
+        </div>
+      </footer>
+
     </div>
   );
 }
