@@ -11,7 +11,7 @@ function About() {
     ];
 
     return (
-        <div className='abt-section'>
+        <div className='abt-section' id='About'>
             <div className='abt-head'>
                 <div className='subtitle'>WHO I AM</div>
                 <div className='title'>About Me</div>

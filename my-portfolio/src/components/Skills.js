@@ -30,7 +30,7 @@ function Skills() {
     ];
 
     return (
-        <div className='sk-section'>
+        <div className='sk-section' id='Skills'>
             <div className='sk-head'>
                 <div className='subtitle'>WHAT I KNOW</div>
                 <div className='title'>Skills</div>
