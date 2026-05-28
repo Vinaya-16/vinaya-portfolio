@@ -10,8 +10,8 @@ function Home() {
                     I build responsive, interactive web applications using React and the MERN stack — passionate about clean UI and great user experiences.
                 </p>
                 <div className='home-buttons'>
-                    <button className='home-btn'><a href="#Projects">View My work</a></button>
-                    <button className='home-btn cnt'><a href='#Contact'>Let's Work Together</a></button>
+                    <button className='home-btn' onClick={() => window.location.href = "#Projects"}>View My Work</button>
+                    <button className='home-btn cnt' onClick={() => window.location.href = "#Contact"}>Let's Work Together</button>
                 </div>
             </div>
         </div>

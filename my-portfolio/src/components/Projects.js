@@ -8,7 +8,7 @@ import erpIcon from './assets/erp.png';
 function Projects() {
 
     const projects = [
-        { id: 1, name: "Grocery Shopping App", gitrepo: "https://quickcart-grocery-shopping.vercel.app/", icon: grocIcon, desc: "QuickCart is a modern full-stack grocery delivery web application inspired by platforms like Blinkit and Zepto. Users can browse products, add items to cart, manage favourites, place orders, and track deliveries with a clean and responsive UI."},
+        { id: 1, name: "Grocery Shopping App", gitrepo: "https://github.com/Vinaya-16/Grocery-Shopping-", icon: grocIcon, desc: "QuickCart is a modern full-stack grocery delivery web application inspired by platforms like Blinkit and Zepto. Users can browse products, add items to cart, manage favourites, place orders, and track deliveries with a clean and responsive UI."},
         { id: 2, name: "QuickCart Clone", gitrepo: "https://github.com/Vinaya-16/QuickCart-Clone", icon: cartIcon, desc: "A modern full-stack grocery delivery web application inspired by Blinkit/Zepto style platforms. Users can browse products, add items to cart, authenticate securely, and place orders through a responsive and user-friendly interface." },
         { id: 3, name: "ERP System Tracer", gitrepo: "https://github.com/Vinaya-16/ERP-System-Tracker", icon: erpIcon, desc: "Hackathon 2026 Project | Full-Stack: React + Node.js + MongoDB + JWT"},
         { id: 4, name: "Career Buddy", gitrepo: "https://github.com/Vinaya-16/CareerBuddy", icon: careerIcon, desc: "Hackathon 2025 Project | Frontend Based: HTML, CSS, JS, LocalStorage (Database)"},
@@ -17,11 +17,11 @@ function Projects() {
 
     return(
         <div className="projects-container" id="Projects">
-            <div className="sk-head">
-                <div className="sk-subtitle pr-subtitle">
+            <div className="pr-head">
+                <div className="subtitle">
                     WHAT I'VE BUILT
                 </div>
-                <div className="sk-title pr-title">
+                <div className="title">
                     Projects
                 </div>
                 <div className="title-underline"></div>
