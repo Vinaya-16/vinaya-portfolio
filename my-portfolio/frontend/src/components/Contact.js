@@ -38,7 +38,9 @@ function Contact() {
       return;
     }
 
-    const response = await fetch('http://localhost:5000/contact', {
+    const react_api = process.env.REACT_APP_API_URI;
+
+    const response = await fetch(`${react_api}/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
