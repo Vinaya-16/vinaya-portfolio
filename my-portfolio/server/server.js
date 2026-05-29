@@ -40,6 +40,18 @@ app.post('/contact', (req, res) => {
     });
 });
 
+app.get('/messages', (req, res) => {
+
+  fs.readFile('messages.json', 'utf-8', (err, data) => {
+
+    if (err) {
+      return res.json([]);
+    }
+
+    res.send(JSON.parse(data));
+  });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
