@@ -30,7 +30,7 @@ function Projects() {
             <div className="pr-section">
                 {projects.map((project, index) => (
                     <div key={index} className="project-card">
-                        <div><img src={project.icon} className="pricon" /></div>
+                        <div><img src={project.icon} alt={project.name} className="pricon" /></div>
                         <h2>{project.name}</h2>
                         <p>{project.desc}</p>
                         <h4><a href={project.gitrepo} target="_blank" rel="noreferrer">View Code</a></h4>

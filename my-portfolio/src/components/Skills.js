@@ -39,7 +39,7 @@ function Skills() {
             <div className='sk-container'>
                 {skills.map((skill, index) => (
                     <div key={skill.id} className='sk-btn'>
-                        <div><img src={skill.icon} /></div>
+                        <div><img src={skill.icon} alt={skill.name} /></div>
                         <h4>{skill.name}</h4>
                     </div>
                 ))}
