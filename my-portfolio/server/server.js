@@ -16,21 +16,29 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log(err));
+  .catch((err) => {
+    console.error('MongoDB Connection Error:', err);
+  });
 
 app.post('/contact', async (req, res) => {
 
   try {
 
+    console.log('Incoming Data:', req.body);
+
     const newMessage = new Message(req.body);
 
-    await newMessage.save();
+    const savedMessage = await newMessage.save();
+
+    console.log('Saved Message:', savedMessage);
 
     res.json({
       message: 'Message saved successfully'
     });
 
   } catch (error) {
+
+    console.log('SAVE ERROR:', error);
 
     res.status(500).json({
       message: 'Error saving message'
