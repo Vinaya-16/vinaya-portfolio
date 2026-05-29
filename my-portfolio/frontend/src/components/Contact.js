@@ -38,7 +38,7 @@ function Contact() {
       return;
     }
 
-    const response = await fetch('https://vinaya-portfolio.onrender.com', {
+    const response = await fetch('https://vinaya-portfolio.onrender.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
