@@ -24,24 +24,34 @@ app.post('/contact', async (req, res) => {
 
   try {
 
-    console.log('Incoming Data:', req.body);
+    console.log(req.body);
 
-    const newMessage = new Message(req.body);
+    const { name, email, message } = req.body;
 
-    const savedMessage = await newMessage.save();
+    if (!name || !email || !message) {
+      return res.status(400).json({
+        message: "Missing fields"
+      });
+    }
 
-    console.log('Saved Message:', savedMessage);
+    const newMessage = new Message({
+      name,
+      email,
+      message
+    });
+
+    await newMessage.save();
 
     res.json({
-      message: 'Message saved successfully'
+      message: "Message saved successfully"
     });
 
   } catch (error) {
 
-    console.log('SAVE ERROR:', error);
+    console.error("FULL ERROR:", error);
 
     res.status(500).json({
-      message: 'Error saving message'
+      message: error.message
     });
   }
 });
