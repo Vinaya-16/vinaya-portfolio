@@ -38,9 +38,9 @@ function Contact() {
       return;
     }
 
-    const react_api = process.env.REACT_APP_API_URI;
+    // const react_api = process.env.REACT_APP_API_URI;
 
-    const response = await fetch(`${react_api}/contact`, {
+    const response = await fetch(`https://vinaya-portfolio.onrender.com/contact`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
