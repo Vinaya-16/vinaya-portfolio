@@ -23,10 +23,10 @@ function About() {
                         I'm a fresher Frontend Developer from India with 1.5 years of hands-on practice building web applications. I love turning ideas into pixel-perfect, functional interfaces.
                     </p>
                     <p>
-                        My journey started with HTML and CSS, and I've since dived deep into React.js and the full MERN stack. I enjoy solving problems, learning new technologies, and writing clean, maintainable code.
+                        My journey started with HTML and CSS, and I've since dived deep into React.js and MongoDB Atlas Cloud Connection. I enjoy solving problems, learning new technologies, and writing clean, maintainable code.
                     </p>
                     <p>
-                        When I'm not coding, I'm exploring UI/UX patterns or working on personal projects to sharpen my skills.
+                        Outside of work, you'll find me exploring new web design trends or brainstorming ideas for my next project. I really enjoy the process of learning new things and turning fresh ideas into real code.
                     </p>
                     <div className='lan-badge'>
                         {lan.map((lang, index) => (
