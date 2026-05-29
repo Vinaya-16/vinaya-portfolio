@@ -14,32 +14,28 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
   origin: '*',
-  methods: ['GET', 'POST'],
-  credentials: true
+  methods: ['GET', 'POST']
 }));
 
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
 
-  console.log('MongoDB Connected');
+    console.log('MongoDB Connected');
 
-  // Start server only after DB connects
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    // Start server only after DB connects
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+  })
+  .catch((err) => {
+    console.error('MongoDB Connection Error:', err);
   });
 
-})
-.catch((err) => {
-  console.error('MongoDB Connection Error:', err);
-});
-
-// Routes
+// Test Route
 app.get('/', (req, res) => {
   res.send('Backend Running Successfully');
 });
@@ -60,7 +56,7 @@ app.post('/contact', async (req, res) => {
       });
     }
 
-    // Create new document
+    // Create new message
     const newMessage = new Message({
       name,
       email,
