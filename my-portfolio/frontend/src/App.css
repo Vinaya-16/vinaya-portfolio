@@ -835,11 +835,11 @@ body {
   .cnt-right input,
   .cnt-right textarea,
   .cnt-right button {
-    width: 15rem;
+    width: 90%;
   }
 
   .cnt-right button {
-    width: 17rem;
+    width: 100%;
   }
 }
 
